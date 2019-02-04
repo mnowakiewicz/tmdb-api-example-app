@@ -17,3 +17,7 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    themoviedb_api_host: https://api.themoviedb.org
+    themoviedb_api_version: 3
+    themoviedb_api_key: 9b0b0e0106f6cf337d41a5a8de585ed6
