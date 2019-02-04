@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="{{ asset('image-picker-master/image-picker/image-picker.css') }}" rel="stylesheet" type="text/css">
+        <style>
+            .container { margin:150px auto;}
+            body { background-color:#f7f7f7;}
+        </style>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="{{ asset('image-picker-master/image-picker/image-picker.js') }}"></script>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

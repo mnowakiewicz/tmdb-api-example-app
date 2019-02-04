@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            Rekomendowane filmy:
+            <select multiple="multiple" class="image-picker" name="movie">
+                {% for movie in movies%}
+                    <option data-img-src="{{ poster_base_url ~ movie['poster_path'] }}" value="{{ movie['id'] }}">{{ movie['title'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(".image-picker").imagepicker({
+            hide_select : true,
+            limit: 0
+        })
+    </script>
+
+{% endblock %}
